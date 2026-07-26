@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type HeroProps = {
   eyebrow?: string;
+  showBrand?: boolean;
   title: string;
   subtitle: string;
   primaryCta?: { href: string; label: string };
@@ -12,6 +14,7 @@ type HeroProps = {
 
 export function Hero({
   eyebrow,
+  showBrand = false,
   title,
   subtitle,
   primaryCta,
@@ -34,7 +37,23 @@ export function Hero({
       )}
 
       <div className="relative animate-fade-up">
-        {eyebrow && (
+        {showBrand && (
+          <div className="mb-8 flex items-center justify-center gap-4">
+            <Image
+              src="/icon.png"
+              alt="SnapHub Global"
+              width={56}
+              height={56}
+              className="h-14 w-14 rounded-xl"
+              priority
+            />
+            <span className="text-3xl font-semibold tracking-tight sm:text-4xl">
+              SnapHub Global
+            </span>
+          </div>
+        )}
+
+        {eyebrow && !showBrand && (
           <p
             className={`mb-4 text-sm font-medium tracking-wide ${
               dark ? "text-blue-400" : "text-blue-600"

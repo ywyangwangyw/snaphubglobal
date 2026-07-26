@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Logo } from "@/components/Logo";
 import { navLinks } from "@/lib/data";
 
 export function Navbar() {
@@ -11,14 +12,8 @@ export function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-black/70 backdrop-blur-xl">
-      <nav className="mx-auto flex h-12 max-w-6xl items-center justify-between px-6 text-sm">
-        <Link
-          href="/"
-          className="font-semibold tracking-tight text-white transition hover:text-white/80"
-          onClick={() => setOpen(false)}
-        >
-          SnapHub Global
-        </Link>
+      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 text-sm">
+        <Logo onClick={() => setOpen(false)} />
 
         <ul className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => {

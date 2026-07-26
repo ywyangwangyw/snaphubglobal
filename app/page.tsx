@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Hero
-        eyebrow="SnapHub Global"
+        showBrand
         title="Electronics. Sourced. Delivered."
         subtitle="A curated B2B reseller for components, devices, and industrial gear. We work by inquiry — tell us what you need and our team handles the rest."
         primaryCta={{ href: "/contact", label: "Send inquiry" }}

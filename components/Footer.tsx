@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/Logo";
 import { navLinks } from "@/lib/data";
 
 export function Footer() {
@@ -6,7 +7,7 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-black px-6 py-12 text-sm text-white/50">
       <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
         <div>
-          <p className="text-base font-semibold text-white">SnapHub Global</p>
+          <Logo size="footer" />
           <p className="mt-3 max-w-xs leading-relaxed">
             Authorized electronic components and devices reseller. All orders
             handled by inquiry — no online checkout.
