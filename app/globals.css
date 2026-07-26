@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #f5f5f7;
+  --muted: #86868b;
+  --surface: #1d1d1f;
+  --accent: #2997ff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "SF Pro Text",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(41, 151, 255, 0.35);
+}
+
+.hero-glow {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(41, 151, 255, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 50%, rgba(139, 92, 246, 0.08), transparent);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out both;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.8s ease-out 0.2s both;
+}
+
+.product-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.product-float-delay {
+  animation: float 4s ease-in-out 0.5s infinite;
+}
+
+.animate-section {
+  animation: fade-up 0.6s ease-out both;
+}

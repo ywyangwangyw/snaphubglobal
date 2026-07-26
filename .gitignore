@@ -1,0 +1,40 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+credentials.json
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+.next/
+next-env.d.ts
+out/
+.turbo/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs and local data
+*.log
+logs/
+data/
+.local/
