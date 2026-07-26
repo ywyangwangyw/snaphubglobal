@@ -1,6 +1,6 @@
-# SnapHub LLC
+# SnapHub Global
 
-SnapHub LLC is an electronic components and devices reseller.
+SnapHub Global is an electronic components and devices reseller.
 
 ## Overview
 
@@ -27,4 +27,4 @@ Keep sensitive credentials out of version control — use environment variables 
 
 ## License
 
-Proprietary — SnapHub LLC. All rights reserved.
+Proprietary — SnapHub Global. All rights reserved.

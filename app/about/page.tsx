@@ -10,9 +10,9 @@ export default function AboutPage() {
   return (
     <>
       <Hero
-        eyebrow="About SnapHub"
+        eyebrow="About SnapHub Global"
         title="Supply chain, simplified."
-        subtitle="SnapHub LLC is an authorized electronic components and devices reseller — connecting manufacturers, resellers, and engineering teams with the parts they need, when they need them."
+        subtitle="SnapHub Global is an authorized electronic components and devices reseller — connecting manufacturers, resellers, and engineering teams with the parts they need, when they need them."
         primaryCta={{ href: "/contact", label: "Send inquiry" }}
         size="default"
       />
@@ -26,7 +26,7 @@ export default function AboutPage() {
             <p className="mt-6 leading-relaxed text-black/60">
               The electronics supply chain is complex — long lead times,
               fragmented vendors, and unclear availability slow down every
-              project. SnapHub exists to simplify sourcing: a curated catalog,
+              project. SnapHub Global exists to simplify sourcing: a curated catalog,
               personal follow-up, and terms tailored to each inquiry.
             </p>
             <p className="mt-4 leading-relaxed text-black/60">

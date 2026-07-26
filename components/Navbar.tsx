@@ -17,7 +17,7 @@ export function Navbar() {
           className="font-semibold tracking-tight text-white transition hover:text-white/80"
           onClick={() => setOpen(false)}
         >
-          SnapHub
+          SnapHub Global
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">

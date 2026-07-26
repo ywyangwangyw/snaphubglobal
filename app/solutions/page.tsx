@@ -12,7 +12,7 @@ export default function SolutionsPage() {
       <Hero
         eyebrow="Solutions"
         title="Built for your industry."
-        subtitle="Whether you're an OEM, IT reseller, or hardware startup — SnapHub connects you with the right products and support. Everything starts with an inquiry."
+        subtitle="Whether you're an OEM, IT reseller, or hardware startup — SnapHub Global connects you with the right products and support. Everything starts with an inquiry."
         primaryCta={{ href: "/contact", label: "Send inquiry" }}
         secondaryCta={{ href: "/catalog", label: "View product lines" }}
         size="default"

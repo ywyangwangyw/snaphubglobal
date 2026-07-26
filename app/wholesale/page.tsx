@@ -11,7 +11,7 @@ export default function WholesalePage() {
     <>
       <Hero
         eyebrow="Wholesale"
-        title="Partner with SnapHub."
+        title="Partner with SnapHub Global."
         subtitle="Wholesale accounts get dedicated support, flexible terms, and personalized sourcing — all arranged through inquiry, not online checkout."
         primaryCta={{ href: "/contact", label: "Send inquiry" }}
         size="default"

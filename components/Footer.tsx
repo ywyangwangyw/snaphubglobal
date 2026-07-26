@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-black px-6 py-12 text-sm text-white/50">
       <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
         <div>
-          <p className="text-base font-semibold text-white">SnapHub LLC</p>
+          <p className="text-base font-semibold text-white">SnapHub Global</p>
           <p className="mt-3 max-w-xs leading-relaxed">
             Authorized electronic components and devices reseller. All orders
             handled by inquiry — no online checkout.
@@ -34,7 +34,7 @@ export function Footer() {
       </div>
 
       <p className="mx-auto mt-10 max-w-6xl text-xs">
-        © {new Date().getFullYear()} SnapHub LLC. All rights reserved.
+        © {new Date().getFullYear()} SnapHub Global. All rights reserved.
       </p>
     </footer>
   );

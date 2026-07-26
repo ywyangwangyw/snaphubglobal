@@ -5,11 +5,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "SnapHub LLC",
-    template: "%s · SnapHub LLC",
+    default: "SnapHub Global",
+    template: "%s · SnapHub Global",
   },
   description:
-    "Electronic components and devices reseller — catalog, wholesale, and fulfillment for businesses.",
+    "SnapHub Global — electronic components and devices reseller. Catalog, wholesale, and fulfillment for businesses.",
 };
 
 export default function RootLayout({
