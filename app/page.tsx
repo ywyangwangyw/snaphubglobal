@@ -2,43 +2,41 @@ import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { ProductCard } from "@/components/ProductCard";
 import { ShowcaseTile } from "@/components/ShowcaseTile";
-import { categories, featuredProducts, partners, stats } from "@/lib/data";
+import {
+  capabilities,
+  divisions,
+  featuredProducts,
+  industryExperience,
+} from "@/lib/data";
 
 export default function Home() {
   return (
     <>
       <Hero
         showBrand
-        title="Electronics. Sourced. Delivered."
-        subtitle="A curated B2B reseller for components, devices, and industrial gear. We work by inquiry — tell us what you need and our team handles the rest."
+        title="Source. Configure. Deliver."
+        subtitle="SnapHub Global sources gaming systems for consumer channels, configures novel AI platforms as a value-added reseller, and supplies server infrastructure for industry partners — all through inquiry-based B2B relationships."
         primaryCta={{ href: "/contact", label: "Send inquiry" }}
-        secondaryCta={{ href: "/catalog", label: "View product lines" }}
+        secondaryCta={{ href: "/catalog", label: "Explore divisions" }}
       />
 
-      <section className="animate-section border-y border-white/5 bg-black px-6 py-8">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-12 gap-y-4">
-          {partners.map((partner) => (
-            <span
-              key={partner}
-              className="text-sm font-medium tracking-wide text-white/30"
-            >
-              {partner}
-            </span>
-          ))}
-        </div>
+      <section className="animate-section border-y border-white/5 bg-black px-6 py-10">
+        <p className="mx-auto max-w-3xl text-center text-sm leading-relaxed text-white/40">
+          {industryExperience}
+        </p>
       </section>
 
       <section className="bg-black px-6 py-4">
         <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-3">
-          {categories.map((cat, i) => (
+          {divisions.map((division, i) => (
             <ShowcaseTile
-              key={cat.slug}
-              slug={cat.slug}
-              title={cat.name}
-              tagline={cat.tagline}
-              href={`/catalog?category=${cat.slug}`}
-              gradient={cat.gradient}
-              accent={cat.accent}
+              key={division.slug}
+              slug={division.slug}
+              title={division.name}
+              tagline={division.tagline}
+              href={`/catalog?division=${division.slug}`}
+              gradient={division.gradient}
+              accent={division.accent}
               large={i === 0}
             />
           ))}
@@ -48,15 +46,16 @@ export default function Home() {
       <section className="animate-section bg-[#f5f5f7] px-6 py-24 text-black">
         <div className="mx-auto max-w-6xl text-center">
           <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            Inquiry-first. No checkout required.
+            Focused. Direct. Inquiry-first.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-black/60">
-            We don&apos;t sell directly online. Share your requirements and we&apos;ll
-            confirm availability, lead time, and terms personally.
+            We&apos;re a structured hardware company — not a catalog site. Share
+            your requirements and we confirm sourcing options, configuration
+            details, and lead time personally.
           </p>
 
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((item) => (
+            {capabilities.map((item) => (
               <div key={item.label}>
                 <p className="text-4xl font-semibold tracking-tight">
                   {item.value}
@@ -72,10 +71,11 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              Sample product lines.
+              Representative lines.
             </h2>
             <p className="mt-4 text-lg text-white/50">
-              A small selection of what we source. Full range available on inquiry.
+              Examples of what we source and configure. Full range available on
+              inquiry.
             </p>
           </div>
 
@@ -99,11 +99,12 @@ export default function Home() {
       <section className="animate-section bg-[#f5f5f7] px-6 py-24 text-black">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            Have a project in mind?
+            Start with a conversation.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-black/60">
-            Whether you need a single part or a full BOM, reach out and our team
-            will follow up with options — no online cart, no published pricing.
+            Whether you&apos;re an AI team needing a configured platform, a
+            channel partner sourcing gaming systems, or a reseller looking for
+            server hardware — reach out and we&apos;ll follow up directly.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
@@ -116,7 +117,7 @@ export default function Home() {
               href="/wholesale"
               className="rounded-full px-6 py-3 text-sm font-medium text-blue-600 transition hover:text-blue-500"
             >
-              Wholesale partnerships →
+              Wholesale inquiries →
             </Link>
           </div>
         </div>

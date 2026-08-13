@@ -10,7 +10,7 @@ export default function ContactPage() {
       <Hero
         eyebrow="Contact"
         title="Let's talk supply."
-        subtitle="Send us your requirements — product needs, wholesale interest, or a custom sourcing project. Our team responds within one business day."
+        subtitle="AI system configuration, gaming supply, server hardware, or wholesale — send your requirements and we'll follow up directly, typically within one business day."
         size="default"
       />
 
@@ -61,9 +61,10 @@ export default function ContactPage() {
                 id="interest"
                 className="mt-2 w-full rounded-xl border border-black/10 bg-[#f5f5f7] px-4 py-3 text-sm outline-none transition focus:border-blue-500"
               >
-                <option>Product inquiry</option>
-                <option>Wholesale partnership</option>
-                <option>Custom sourcing</option>
+                <option>AI Systems</option>
+                <option>Gaming</option>
+                <option>Infrastructure</option>
+                <option>Wholesale inquiry</option>
                 <option>General inquiry</option>
               </select>
             </div>

@@ -11,8 +11,8 @@ export default function WholesalePage() {
     <>
       <Hero
         eyebrow="Wholesale"
-        title="Partner with SnapHub Global."
-        subtitle="Wholesale accounts get dedicated support, flexible terms, and personalized sourcing — all arranged through inquiry, not online checkout."
+        title="Wholesale inquiries welcome."
+        subtitle="Channel partners, resellers, and volume buyers — send us your requirements across gaming, AI systems, or infrastructure. We respond directly with sourcing options and per-order terms."
         primaryCta={{ href: "/contact", label: "Send inquiry" }}
         size="default"
       />
@@ -20,11 +20,12 @@ export default function WholesalePage() {
       <section className="bg-[#f5f5f7] px-6 py-24 text-black">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center text-3xl font-semibold tracking-tight sm:text-4xl">
-            How we work with wholesale partners.
+            How we work with partners.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-black/60">
-            No self-service cart. Every order starts with a conversation so we
-            can confirm the right parts, quantities, and terms for your business.
+            No self-service cart or published price lists. Every order starts
+            with a conversation so we can confirm the right hardware, quantities,
+            and terms for your business.
           </p>
 
           <div className="mt-16 grid gap-6 sm:grid-cols-2">
@@ -54,17 +55,17 @@ export default function WholesalePage() {
               {
                 step: "01",
                 title: "Send an inquiry",
-                body: "Tell us about your business, product needs, and expected volumes. We respond within one business day.",
+                body: "Tell us about your business, product needs, and expected volumes. We aim to respond within one business day.",
               },
               {
                 step: "02",
                 title: "Review your options",
-                body: "We share availability, lead times, and account terms tailored to your requirements — nothing is published online.",
+                body: "We share availability, lead times, and a quote tailored to your requirements — nothing is published online.",
               },
               {
                 step: "03",
-                title: "Place orders through your rep",
-                body: "Approved accounts work directly with their account manager for quotes, POs, and fulfillment.",
+                title: "Confirm and fulfill",
+                body: "Once terms are agreed, we handle sourcing, configuration (for AI systems), and delivery.",
               },
             ].map((item) => (
               <li key={item.step} className="flex gap-8">

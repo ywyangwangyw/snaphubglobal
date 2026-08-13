@@ -1,104 +1,111 @@
 export const navLinks = [
-  { href: "/catalog", label: "Catalog" },
+  { href: "/catalog", label: "Divisions" },
   { href: "/wholesale", label: "Wholesale" },
   { href: "/solutions", label: "Solutions" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
-export const categories = [
+export const divisions = [
   {
-    slug: "components",
-    name: "Components",
-    tagline: "Precision parts. Sourced on request.",
-    description: "Semiconductors, passives, connectors, and power modules from authorized channels.",
-    gradient: "from-zinc-900 via-zinc-800 to-zinc-950",
-    accent: "text-blue-400",
+    slug: "ai",
+    name: "AI Systems",
+    tagline: "Configured platforms for AI teams.",
+    description:
+      "Value-added reseller — we source components and configure novel AI systems: multi-GPU workstations, inference servers, and edge appliances, built and validated for your workload.",
+    gradient: "from-emerald-950 via-teal-900 to-black",
+    accent: "text-emerald-400",
   },
   {
-    slug: "devices",
-    name: "Devices",
-    tagline: "Enterprise hardware. Available by inquiry.",
-    description: "Laptops, networking gear, storage, and peripherals for fleet and resale programs.",
-    gradient: "from-neutral-900 via-stone-900 to-black",
+    slug: "gaming",
+    name: "Gaming",
+    tagline: "Systems and CPUs for consumer channels.",
+    description:
+      "Gaming desktops, gaming CPUs, and complete systems sourced for retailers, e-tailers, and integrators who sell to end consumers.",
+    gradient: "from-violet-950 via-purple-900 to-black",
     accent: "text-violet-400",
   },
   {
-    slug: "industrial",
-    name: "Industrial",
-    tagline: "Built for production lines.",
-    description: "PLCs, sensors, automation kits, and ruggedized equipment for manufacturing.",
-    gradient: "from-slate-900 via-slate-800 to-zinc-950",
-    accent: "text-emerald-400",
+    slug: "infrastructure",
+    name: "Infrastructure",
+    tagline: "Server hardware for channel partners.",
+    description:
+      "Rack servers, storage, and networking sourced for resellers and IT partners — inquiry-based, with specs and availability confirmed on each request.",
+    gradient: "from-slate-900 via-blue-950 to-black",
+    accent: "text-blue-400",
   },
 ];
 
+/** @deprecated Use divisions — kept as alias for catalog filters */
+export const categories = divisions;
+
 export const featuredProducts = [
   {
-    name: "SnapCore MCU Series",
-    category: "Components",
-    spec: "ARM Cortex-M · 512KB Flash",
+    name: "Inference Workstation",
+    category: "AI Systems",
+    spec: "Multi-GPU · Custom config · Burn-in",
   },
   {
-    name: "HubLink Pro Switch",
-    category: "Devices",
-    spec: "48-port · 10GbE uplink",
+    name: "Gaming Desktop",
+    category: "Gaming",
+    spec: "High-end CPU · Discrete GPU · Ready to ship",
   },
   {
-    name: "EdgeSense IoT Kit",
-    category: "Industrial",
-    spec: "Temperature · Vibration · MQTT",
+    name: "Rack Server",
+    category: "Infrastructure",
+    spec: "2U · Enterprise CPU · Expandable storage",
   },
 ];
 
 export const solutions = [
   {
-    title: "OEM & Manufacturing",
-    description: "BOM sourcing, cross-reference support, and scheduled deliveries aligned to your production calendar.",
-    stats: ["Custom sourcing", "ERP integration", "Volume programs"],
+    title: "AI Startups & Labs",
+    description:
+      "Novel AI systems configured to your workload — inference, fine-tuning, or edge deployment. We source the hardware, assemble, validate, and ship ready to run.",
+    stats: ["Multi-GPU builds", "Custom configuration", "Burn-in & validation"],
   },
   {
-    title: "IT Resellers & MSPs",
-    description: "Fulfillment partnerships, serialized tracking, and account-based programs for your customer base.",
-    stats: ["Net-30 terms", "Drop-ship ready", "Dedicated rep"],
+    title: "Gaming & Consumer Channels",
+    description:
+      "Gaming desktops and CPUs for partners selling to end consumers. Share your SKU requirements or volume needs — we confirm sourcing options on inquiry.",
+    stats: ["Complete systems", "Gaming CPUs", "Channel sourcing"],
   },
   {
-    title: "Startup & R&D",
-    description: "Low MOQs, rapid prototyping kits, and engineering support for early-stage hardware teams.",
-    stats: ["Sample programs", "Datasheet library", "Fast turnaround"],
+    title: "Server Resellers & IT Partners",
+    description:
+      "Server, storage, and networking hardware for resellers who need a responsive sourcing partner. Every quote is built around your specific request.",
+    stats: ["Rack servers", "Storage", "Networking"],
   },
 ];
 
 export const wholesaleFeatures = [
   {
-    title: "Dedicated account team",
-    body: "A single point of contact who understands your product lines, lead times, and sourcing needs.",
+    title: "Direct follow-up",
+    body: "Every inquiry gets a personal response — no ticket queue, no self-service cart. We confirm specs, availability, and lead time before anything moves forward.",
   },
   {
-    title: "Availability on request",
-    body: "Tell us what you need — we confirm stock, lead time, and options before anything moves forward.",
+    title: "Cross-division sourcing",
+    body: "Gaming, AI systems, and infrastructure under one company. One inquiry can cover multiple product lines when your project spans them.",
   },
   {
-    title: "BOM & bulk inquiries",
-    body: "Send a parts list or project brief. We respond with availability and terms tailored to your order.",
+    title: "Configuration as value-add",
+    body: "Our AI Systems line goes beyond sourcing — we configure, assemble, and validate platforms that off-the-shelf catalogs don't cover.",
   },
   {
-    title: "Flexible payment terms",
-    body: "Net-30 and Net-60 options for qualified business accounts, arranged during onboarding.",
+    title: "Terms per engagement",
+    body: "Pricing and payment terms are quoted on each inquiry. No published price lists — we build quotes around your specific requirements.",
   },
 ];
 
-export const stats = [
-  { value: "3", label: "Core product lines" },
-  { value: "24hr", label: "Inquiry response time" },
-  { value: "99.2%", label: "Fill rate" },
-  { value: "500+", label: "Business accounts" },
+export const capabilities = [
+  { value: "3", label: "Focused business lines" },
+  { value: "24hr", label: "Inquiry response target" },
+  { value: "VAR", label: "AI system configuration" },
+  { value: "B2B", label: "Inquiry-based only" },
 ];
 
-export const partners = [
-  "Avnet Authorized",
-  "Arrow Partner",
-  "Digi-Key Supply",
-  "Mouser Channel",
-  "TD Synnex",
-];
+/** @deprecated Use capabilities */
+export const stats = capabilities;
+
+export const industryExperience =
+  "We've done business across the server, gaming, and AI hardware supply chain — with distributors, OEMs, and channel partners that serve these industries.";

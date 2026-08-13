@@ -2,27 +2,29 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 const icons: Record<string, ReactNode> = {
-  components: (
+  ai: (
     <svg viewBox="0 0 80 80" className="h-20 w-20 opacity-40" fill="none">
-      <rect x="16" y="16" width="48" height="48" rx="6" stroke="currentColor" strokeWidth="2" />
-      <rect x="24" y="24" width="12" height="12" rx="2" fill="currentColor" opacity="0.6" />
-      <rect x="44" y="24" width="12" height="12" rx="2" fill="currentColor" opacity="0.4" />
-      <rect x="24" y="44" width="12" height="12" rx="2" fill="currentColor" opacity="0.4" />
-      <rect x="44" y="44" width="12" height="12" rx="2" fill="currentColor" opacity="0.6" />
+      <rect x="28" y="28" width="24" height="24" rx="4" stroke="currentColor" strokeWidth="2" />
+      <path d="M40 16v8M40 56v8M16 40h8M56 40h8M22 22l6 6M52 52l6 6M58 22l-6 6M28 52l-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
     </svg>
   ),
-  devices: (
+  gaming: (
     <svg viewBox="0 0 80 80" className="h-20 w-20 opacity-40" fill="none">
-      <rect x="20" y="12" width="40" height="56" rx="4" stroke="currentColor" strokeWidth="2" />
-      <rect x="26" y="18" width="28" height="38" rx="2" fill="currentColor" opacity="0.3" />
-      <circle cx="40" cy="62" r="3" fill="currentColor" opacity="0.5" />
+      <rect x="14" y="28" width="52" height="32" rx="8" stroke="currentColor" strokeWidth="2" />
+      <path d="M28 44h8M32 40v8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="48" cy="40" r="3" fill="currentColor" opacity="0.5" />
+      <circle cx="54" cy="46" r="3" fill="currentColor" opacity="0.5" />
     </svg>
   ),
-  industrial: (
+  infrastructure: (
     <svg viewBox="0 0 80 80" className="h-20 w-20 opacity-40" fill="none">
-      <circle cx="40" cy="40" r="20" stroke="currentColor" strokeWidth="2" />
-      <circle cx="40" cy="40" r="8" fill="currentColor" opacity="0.4" />
-      <path d="M40 20v-6M40 66v-6M20 40h-6M66 40h-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <rect x="18" y="14" width="44" height="12" rx="2" stroke="currentColor" strokeWidth="2" />
+      <rect x="18" y="30" width="44" height="12" rx="2" stroke="currentColor" strokeWidth="2" />
+      <rect x="18" y="46" width="44" height="12" rx="2" stroke="currentColor" strokeWidth="2" />
+      <circle cx="26" cy="20" r="2" fill="currentColor" opacity="0.6" />
+      <circle cx="26" cy="36" r="2" fill="currentColor" opacity="0.6" />
+      <circle cx="26" cy="52" r="2" fill="currentColor" opacity="0.6" />
+      <path d="M34 20h22M34 36h22M34 52h22" stroke="currentColor" strokeWidth="1.5" opacity="0.4" />
     </svg>
   ),
 };

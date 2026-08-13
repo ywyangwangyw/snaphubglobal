@@ -1,19 +1,19 @@
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { ProductCard } from "@/components/ProductCard";
-import { categories, featuredProducts } from "@/lib/data";
+import { divisions, featuredProducts } from "@/lib/data";
 
 export const metadata = {
-  title: "Catalog",
+  title: "Divisions",
 };
 
 export default function CatalogPage() {
   return (
     <>
       <Hero
-        eyebrow="Catalog"
-        title="Curated product lines."
-        subtitle="We carry a focused selection across components, devices, and industrial equipment. Pricing and availability are shared by inquiry only — we don't sell directly online."
+        eyebrow="Divisions"
+        title="Three lines. One company."
+        subtitle="AI Systems, Gaming, and Infrastructure — each with its own product focus. Pricing and availability are confirmed on inquiry; we don't sell through an online catalog."
         primaryCta={{ href: "/contact", label: "Send inquiry" }}
         size="default"
       />
@@ -21,26 +21,26 @@ export default function CatalogPage() {
       <section className="border-t border-white/10 bg-black px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-2xl font-semibold tracking-tight text-white">
-            Product categories
+            Business lines
           </h2>
           <p className="mt-2 max-w-2xl text-white/50">
-            Browse by line to see representative products. Contact us for the full
-            range, specs, and availability.
+            Explore by area to see what we source and configure. Contact us for
+            specs, availability, and quotes.
           </p>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {categories.map((cat) => (
+            {divisions.map((division) => (
               <div
-                key={cat.slug}
-                className={`rounded-2xl bg-gradient-to-b ${cat.gradient} p-8`}
+                key={division.slug}
+                className={`rounded-2xl bg-gradient-to-b ${division.gradient} p-8`}
               >
-                <p className={`text-sm font-medium ${cat.accent}`}>
-                  {cat.tagline}
+                <p className={`text-sm font-medium ${division.accent}`}>
+                  {division.tagline}
                 </p>
                 <h3 className="mt-2 text-2xl font-semibold text-white">
-                  {cat.name}
+                  {division.name}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/50">
-                  {cat.description}
+                  {division.description}
                 </p>
               </div>
             ))}
@@ -52,11 +52,11 @@ export default function CatalogPage() {
         <div className="mx-auto max-w-4xl">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">
-              Sample listings
+              Representative examples
             </h2>
             <p className="mt-2 text-black/50">
-              These are examples from our catalog. For pricing, stock, and
-              alternatives, send an inquiry — we respond within one business day.
+              Illustrative product types — not a live inventory. Send an inquiry
+              for current sourcing options.
             </p>
           </div>
 
@@ -69,8 +69,8 @@ export default function CatalogPage() {
           <div className="mt-12 rounded-2xl border border-black/10 bg-white p-8 text-center">
             <p className="text-lg font-medium">Need something not listed?</p>
             <p className="mx-auto mt-2 max-w-md text-sm text-black/50">
-              We source beyond what&apos;s shown here. Share your part numbers or
-              project details and we&apos;ll get back to you.
+              We source and configure beyond what&apos;s shown here. Share your
+              requirements and we&apos;ll follow up directly.
             </p>
             <Link
               href="/contact"

@@ -9,8 +9,8 @@ export function Footer() {
         <div>
           <Logo size="footer" />
           <p className="mt-3 max-w-xs leading-relaxed">
-            Authorized electronic components and devices reseller. All orders
-            handled by inquiry — no online checkout.
+            Gaming supply, AI system configuration, and server infrastructure.
+            B2B inquiries only — no online checkout.
           </p>
         </div>
 

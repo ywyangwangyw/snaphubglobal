@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s · SnapHub Global",
   },
   description:
-    "SnapHub Global — electronic components and devices reseller. Catalog, wholesale, and fulfillment for businesses.",
+    "SnapHub Global — gaming supply, AI system configuration, and server infrastructure for B2B partners. Inquiry-based.",
 };
 
 export default function RootLayout({
