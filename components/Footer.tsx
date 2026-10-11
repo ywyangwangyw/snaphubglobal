@@ -31,6 +31,11 @@ export function Footer() {
           <p className="mb-4 font-medium text-white/80">Contact</p>
           <p>sales@snaphub.com</p>
           <p className="mt-1">Mon–Fri · 8am–6pm ET</p>
+          <p className="mt-4">
+            <Link href="/mobile" className="text-xs text-white/30 transition hover:text-white/60">
+              Admin
+            </Link>
+          </p>
         </div>
       </div>
 
