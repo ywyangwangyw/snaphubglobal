@@ -6,7 +6,8 @@ import { Footer } from "@/components/Footer";
 
 export function LayoutChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const isAdminArea = pathname?.startsWith("/mobile");
+  const isAdminArea =
+    pathname?.startsWith("/mobile") || pathname?.startsWith("/stock");
 
   if (isAdminArea) {
     return <>{children}</>;

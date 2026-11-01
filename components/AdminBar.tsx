@@ -2,6 +2,12 @@
 
 import { useState, type ReactNode } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const TOOLS = [
+  { href: "/mobile", label: "Farm" },
+  { href: "/stock", label: "Stock" },
+] as const;
 
 export function AdminBar({
   title,
@@ -10,6 +16,7 @@ export function AdminBar({
   title: string;
   extra?: ReactNode;
 }) {
+  const pathname = usePathname();
   const [loggingOut, setLoggingOut] = useState(false);
 
   async function handleLogout() {
@@ -26,14 +33,29 @@ export function AdminBar({
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6">
         <div className="flex items-center gap-4">
-          <Link href="/mobile" className="text-sm text-white/40 transition hover:text-white/70">
-            ← Admin
+          <Link href="/" className="text-sm text-white/40 transition hover:text-white/70">
+            ← Home
           </Link>
           <span className="text-white/20">|</span>
-          <span className="text-sm font-semibold text-white">{title}</span>
-          <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-400">
-            Admin
-          </span>
+          <nav className="flex items-center gap-1">
+            {TOOLS.map((tool) => {
+              const active = pathname === tool.href;
+              return (
+                <Link
+                  key={tool.href}
+                  href={tool.href}
+                  className={`rounded-full px-3 py-1 text-xs font-medium transition ${
+                    active
+                      ? "bg-white/10 text-white"
+                      : "text-white/50 hover:text-white"
+                  }`}
+                >
+                  {tool.label}
+                </Link>
+              );
+            })}
+          </nav>
+          <span className="hidden text-sm font-semibold text-white sm:inline">{title}</span>
         </div>
         <div className="flex items-center gap-4">
           {extra}

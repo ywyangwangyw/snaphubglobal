@@ -35,6 +35,12 @@ export function Navbar() {
 
         <div className="flex items-center gap-3">
           <Link
+            href="/mobile/login"
+            className="rounded-full border border-white/20 px-4 py-1.5 text-xs font-medium text-white/80 transition hover:border-white/40 hover:text-white"
+          >
+            Admin login
+          </Link>
+          <Link
             href="/contact"
             className="hidden rounded-full bg-white px-4 py-1.5 text-xs font-medium text-black transition hover:bg-white/90 sm:inline-block"
           >
@@ -89,6 +95,15 @@ export function Navbar() {
                 </li>
               );
             })}
+            <li className="pt-2">
+              <Link
+                href="/mobile/login"
+                onClick={() => setOpen(false)}
+                className="block rounded-full border border-white/20 px-4 py-2.5 text-center text-xs font-medium text-white/80"
+              >
+                Admin login
+              </Link>
+            </li>
             <li className="pt-2">
               <Link
                 href="/contact"

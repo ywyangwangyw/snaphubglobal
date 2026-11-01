@@ -39,6 +39,8 @@ function isAdminApi(pathname: string) {
 function isAdminPage(pathname: string) {
   return (
     pathname === "/mobile" ||
+    pathname === "/stock" ||
+    pathname.startsWith("/stock/") ||
     (pathname.startsWith("/mobile/") &&
       !pathname.startsWith("/mobile/login") &&
       !pathname.startsWith("/mobile/api/"))
@@ -70,6 +72,8 @@ export const config = {
   matcher: [
     "/mobile",
     "/mobile/:path*",
+    "/stock",
+    "/stock/:path*",
     "/api/stream",
     "/api/watches",
     "/api/img",
