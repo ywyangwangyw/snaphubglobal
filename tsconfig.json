@@ -15,7 +15,11 @@
     "incremental": true,
     "plugins": [{ "name": "next" }],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@sw/*": ["./sw/web/*"],
+      "@stockwatch/adapters": ["./sw/packages/adapters/index.ts"],
+      "@stockwatch/db": ["./sw/packages/db/index.ts"],
+      "@stockwatch/types": ["./sw/packages/types/index.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

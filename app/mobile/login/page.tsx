@@ -3,6 +3,7 @@
 import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { safeAdminFrom } from "@/lib/admin-from";
 
 function LoginForm() {
   const router = useRouter();
@@ -11,7 +12,7 @@ function LoginForm() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const fromPath = searchParams.get("from") || "/mobile";
+  const fromPath = safeAdminFrom(searchParams.get("from"));
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -27,7 +28,8 @@ function LoginForm() {
       });
       const data = await res.json();
       if (res.ok && data.ok) {
-        router.push(fromPath);
+        if (fromPath.startsWith("http")) window.location.href = fromPath;
+        else router.push(fromPath);
       } else {
         setError(data.error || "Login failed");
         setLoading(false);
@@ -50,7 +52,7 @@ function LoginForm() {
           </div>
           <h1 className="text-xl font-semibold text-white">Admin Access</h1>
           <p className="mt-2 text-sm text-white/50">
-            SnapHub Global · Mobile Device Farm
+            SnapHub Global · Farm and Stockwatch
           </p>
         </div>
 

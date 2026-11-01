@@ -26,33 +26,54 @@ async function verifyToken(token: string, secret: string): Promise<boolean> {
   }
 }
 
-export async function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl;
+function isAdminApi(pathname: string) {
+  return (
+    pathname === "/api/stream" ||
+    pathname.startsWith("/api/watches") ||
+    pathname.startsWith("/api/img") ||
+    pathname.startsWith("/api/history") ||
+    pathname.startsWith("/api/snapshots")
+  );
+}
 
-  // Only protect /mobile (but allow /mobile/login and API routes through)
-  if (
+function isAdminPage(pathname: string) {
+  return (
     pathname === "/mobile" ||
     (pathname.startsWith("/mobile/") &&
-     !pathname.startsWith("/mobile/login") &&
-     !pathname.startsWith("/mobile/api/"))
-  ) {
-    const token = req.cookies.get("snaphub_admin")?.value;
-    const secret = process.env.SESSION_SECRET;
+      !pathname.startsWith("/mobile/login") &&
+      !pathname.startsWith("/mobile/api/"))
+  );
+}
 
-    if (!secret) {
-      return NextResponse.redirect(new URL("/mobile/login", req.url));
-    }
-
-    if (!token || !(await verifyToken(token, secret))) {
-      const loginUrl = new URL("/mobile/login", req.url);
-      loginUrl.searchParams.set("from", pathname);
-      return NextResponse.redirect(loginUrl);
-    }
+export async function middleware(req: NextRequest) {
+  const { pathname } = req.nextUrl;
+  if (!isAdminPage(pathname) && !isAdminApi(pathname)) {
+    return NextResponse.next();
   }
 
-  return NextResponse.next();
+  const token = req.cookies.get("snaphub_admin")?.value;
+  const secret = process.env.SESSION_SECRET;
+  const ok = Boolean(secret && token && (await verifyToken(token, secret)));
+
+  if (ok) return NextResponse.next();
+
+  if (isAdminApi(pathname)) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const loginUrl = new URL("/mobile/login", req.url);
+  loginUrl.searchParams.set("from", pathname);
+  return NextResponse.redirect(loginUrl);
 }
 
 export const config = {
-  matcher: ["/mobile/:path*"],
+  matcher: [
+    "/mobile",
+    "/mobile/:path*",
+    "/api/stream",
+    "/api/watches",
+    "/api/img",
+    "/api/history",
+    "/api/snapshots",
+  ],
 };
